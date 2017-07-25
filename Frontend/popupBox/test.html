@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+<button type="button" id="box">Popup Box</button>
+<div class="overlay" style="display: none">
+    <div class="content"> 对话框内容</div>
+</div>
+
+<div class="container">
+
+    <p> owejfoiwengoerfnow
+        wegjlwejfglerg
+        wejfwejfgowef</p>
+    <div class="green-box"> test</div>
+    <!--<div class="clearfix"></div>-->
+    <div class="blue-box"> test1</div>
+
+</div>
+
+<style>
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .8);
+
+    }
+
+    .overlay .content {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        height: 50%;
+        background: #ffffff;
+    }
+
+    .green-box, .blue-box {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    .green-box {
+        background: green;
+        /*float: left;*/
+    }
+
+    .clearfix {
+        clear: both;
+    }
+
+    .blue-box {
+        background: blue;
+        /*margin: auto;*/
+        float: left;
+        /*position: absolute;*/
+    }
+
+    .container {
+        position: relative;
+    }
+
+
+</style>
+
+<script>
+
+  document.querySelector('#box').addEventListener('click', function() {
+    var overlay = document.querySelector('.overlay');
+    overlay.style.display = 'inline';
+    overlay.style.display = '';
+    console.log(overlay.style);
+    console.log(this);
+
+    console.log('anything wrong?');
+
+  });
+
+
+</script>
+
+</body>
+</html>

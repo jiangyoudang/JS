@@ -1,0 +1,54 @@
+<script>
+
+
+    //    class A {
+    //        constructor(name) {
+    //            this.name = name;
+    //        }
+    //
+    //        get name1() {
+    //           return this._name1;
+    //        }
+    //
+    //        set name1(value) {
+    //            this._name1 = value;
+    //        }
+    //    }
+    //
+    //
+    //    a = new A('test');
+    //
+    //
+    //    console.info(A);
+    //    console.info(a.name);
+    //    console.info(a.name1);
+    //    a.name1 = 'reset';
+    //    console.info(a.name1);
+    //
+
+    "use strict";
+
+    var expensive = (a, b) => a*b;
+    
+
+    function single(fn) {
+        var saved;
+        return (...rest)=> {
+            if (!saved) {
+                saved = fn.apply(null, rest);
+
+            }
+            return saved;
+        }
+
+    }
+
+    console.log(expensive(2,2));
+    var b = single(expensive);
+    console.log(b(2, 3));
+    console.log(b(1, 3));
+    console.log(b(2,2));
+
+
+</script>
+

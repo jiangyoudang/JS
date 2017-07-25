@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip</title>
+    <style>
+        .tooltip {
+            position: relative;
+            text-align: center;
+        }
+
+        .tooltip .tooltip-text {
+            background: gray;
+            visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            right:0;
+            /*bottom: 0;*/
+            margin: auto;
+            /*margin-left: -5rem;*/
+            width: 30%;
+            min-width: 10rem;
+            height: 100%;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            z-index:1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="tooltip">Hover to show text
+    <span class="tooltip-text">  I am out!!!!
+        </span>
+</div>
+<div> some here </div>
+
+
+</body>
+</html>

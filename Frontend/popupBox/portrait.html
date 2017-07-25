@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview</title>
+    <style>
+        .base {
+            width:60%;
+            height:500px;
+            background: greenyellow;
+            position: relative;
+        }
+        /*.base:hover > .edit {*/
+            /*visibility: visible;*/
+        /*}*/
+
+
+        .edit {
+            width: 20%;
+            height:30%;
+            /*position: absolute;*/
+            /*top:0;*/
+            /*right:0;*/
+            float: right;
+            background: none;
+            /*opacity:0;*/
+            z-index:1;
+        }
+
+        .edit:hover {
+            /*opacity:1;*/
+            background: red;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="base">
+    <input>
+    <p> lala<span> ee</span> gg</p>
+
+    <div class="edit">
+
+
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      const nodes = document.querySelector('.base');
+      console.log(nodes);
+    })
+
+
+</script>
+
+
+</body>
+</html>
